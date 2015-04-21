@@ -1,0 +1,25 @@
+ls = Lista los archivos y directorios
+sort = Ordena alfabeticamente una lista de archivos
+cd = Cambia de directorio
+pwd = Muestra la ruta al directorio actual
+tree = Muestra la estructura de directorios y archivos en forma grafica
+mkdir = Crea un directorio
+rmdir = Borra directorios 
+cp = Copia archivos
+rm = Borra archivos
+mv = Mueve o renombra archivos y directorios
+cat = Muestra el contenido de uno o varios archivos
+more = Ve el contenido de uno o varios archivos
+less = Ve el contenido de los archivos
+split = Dividir archivos
+find = Busca archivos
+locate = Localiza archivos segun una lista generada
+updatedb = Actualiza la lista de los archivos existentes
+whereis = Muestra la ubicacion de un archivo
+file = Muestra el tipo de archivo
+whatis = Muestra descripcion del archivo
+wc = Muestra el total de lineas, palabras o caracteres en un archivo
+grep = Busca un texto en un archivo
+head = Muestra el inicio de un archivo
+
+
