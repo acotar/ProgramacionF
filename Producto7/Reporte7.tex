@@ -51,31 +51,31 @@ A continuaci\'on se brindar\'a el c\'odigo para Fortran.
 PROGRAM Mareas
 
 IMPLICIT NONE
+
+! Declaracion de variables 1
+
 REAL, DIMENSION (7674):: altura
 INTEGER :: i
-!-------------------------------------
-REAL :: Dif, Maxm1, Maxm2, Maxm3, Maxm4, Maxm5
-REAL :: Tiempom1x, Tiempom2x, Tiempom3x, Tiempom4x, Tiempom5x
-!-------------------------------------
-REAL :: Dif2, Minm1, Minm2, Minm3, Minm4, Minm5
-REAL :: Tiempom1n, Tiempom2n, Tiempom3n, Tiempom4n, Tiempom5n
-!-------------------------------------
-REAL :: Dif3, Maxd1, Maxd2, Maxd3, Maxd4, Maxd5
-REAL :: Tiempod1x, Tiempod2x, Tiempod3x, Tiempod4x, Tiempod5x
-!-------------------------------------
-REAL :: Dif4, Mind1, Mind2, Mind3, Mind4, Mind5
-REAL :: Tiempod1n, Tiempod2n, Tiempod3n, Tiempod4n, Tiempod5n
-!-------------------------------------
-REAL :: PeriodomM1, PeriodomM2, PeriodomM3, PeriodomM4, PeriodomM5
-REAL :: PeriodomN1, PeriodomN2, PeriodomN3, PeriodomN4, Periodomn5
-REAL :: PeriododM1, PeriododM2, PeriododM3, PeriododM4, PeriododM5
-REAL :: PeriododN1, PeriododN2, PeriododN3, PeriododN4, PeriododN5
-!--------------------------------------
-REAL :: Periodo_mensual_max
-REAL :: Periodo_mensual_min
-REAL :: Periodo_diario_max
-REAL :: Periodo_diario_min
-!-------------------------------------
+
+! Declaracion de variables 2
+
+real :: M1, M2, M3, M4, M5, Dif    ! Maximox
+real :: T1, T2, T3, T4, T5 ! Tiempom#x
+real :: Dif2, E1Min, E2Min, E3Min, E4Min, E5Min !Minm#
+real :: T1n, T2n, T3n, T4n, T5n !Tiempon
+real :: Dif3, d1Mx, d2Mx, d3Mx, d4Mx, d5Mx !Maxd#
+real :: T1x, T2x, T3x, T4x, T5x !Tiempod#x
+real :: Dif4, F1Mi, F2Mi, F3Mi, F4Mi, F5Mi !Mind#
+real :: E1nT, E2nT, E3nT, E4nT, E5nT !Tiempod#n
+real :: PM1, PM2, PM3, PM4, PM5 !PeriodomM#
+REAL :: PN1, PN2, PN3, PN4, PN5 !PeriodomN#
+REAL :: PdM1, PdM2, PdM3, PdM4, PdM5 !PeriododM#
+REAL :: PdN1, PdN2, PdN3, PdN4, PdN5 !PeriododN#
+REAL :: Mensual_maximo !Periodo_mensual_max
+REAL :: Mensual_minimo !Periodo_mensual_min
+REAL :: Diario_max !Periodo_diario_max
+REAL :: Diario_min !Periodo_diario_min
+
 
 
 
@@ -86,306 +86,330 @@ DO i=1,7674
 READ (1,*) altura(i)
 END DO
 CLOSE (1)
-
-Maxm1 = 0
+!*************************************
+M1 = 0
 DO i=1,1344
-Dif=Maxm1 - altura(i)
+Dif=M1 - altura(i)
 IF (Dif < 0) THEN 
-Maxm1 = altura (i)
+M1 = altura (i)
 
-Tiempom1x= i/48.0
+T1= i/48.0
 
 END IF
 END DO
 
-Maxm2 = 0
+!************************************
+
+M2 = 0
 DO i=1345,2690
-Dif =  Maxm2 - altura(i)
+Dif =  M2 - altura(i)
 IF (Dif < 0) THEN 
-Maxm2 = altura(i)
+M2 = altura(i)
 
-Tiempom2x=i/48.0
+T2=i/48.0
 END IF
 END DO
 
+!************************************
 
-Maxm3 = 0
+M3 = 0
 DO i=2691,4035
-Dif = Maxm3 - altura(i)
+Dif = M3 - altura(i)
 IF (Dif < 0) THEN 
-Maxm3 = altura (i)
+M3 = altura (i)
 
-Tiempom3x=i/48.0
+T3=i/48.0
 END IF
 END DO 
 
-Maxm4 = 0
+!************************************
+
+M4 = 0
 DO i=4036,5380
-Dif = Maxm4 - altura(i)
+Dif = M4 - altura(i)
 IF (Dif < 0) THEN 
-Maxm4 = altura (i)
+M4 = altura (i)
 
-Tiempom4x=i/48.0
+T4=i/48.0
 END IF
 END DO
 
-Maxm5 = 0
+!************************************
+
+M5 = 0
 DO i=5381, 6725
-Dif = Maxm5 - altura(i)
+Dif = M5 - altura(i)
 IF (Dif < 0) THEN 
-Maxm5 = altura (i)
+M5 = altura (i)
 
-Tiempom5x=i/48.0
+T5=i/48.0
 END IF
 END DO
 
-!---------------------------------------------
+!************************************
 
-Minm1 = 0
+E1Min = 0
 DO i= 1, 1344
-Dif2= Minm1 - altura(i)
+Dif2= E1Min - altura(i)
 IF (Dif2> 0) THEN 
-Minm1 = altura (i)
+E1Min = altura (i)
 
-Tiempom1n=i/48.0
+T1n=i/48.0
 END IF
 END DO
 
-Minm2 = 0
+!************************************
+
+E2Min = 0
 DO i= 1345, 2690
-Dif2= Minm2 - altura(i)
+Dif2= E2Min - altura(i)
 IF (Dif2> 0) THEN 
-Minm2 = altura (i)
+E2Min = altura (i)
 
-Tiempom2n=i/48.0
+T2n=i/48.0
 END IF
 END DO
 
-Minm3 = 0
+!************************************
+
+E3Min = 0
 DO i= 2691, 4035
-Dif2= Minm3 - altura(i)
+Dif2= E3Min - altura(i)
 IF (Dif2> 0) THEN 
-Minm3 = altura (i)
+E3Min = altura (i)
 
-Tiempom3n=i/48.0
+T3n=i/48.0
 END IF
 END DO
 
-Minm4 = 0
+!************************************
+
+E4Min = 0
 DO i= 4036, 5380
-Dif2= Minm4 - altura(i)
+Dif2= E4Min - altura(i)
 IF (Dif2> 0) THEN 
-Minm4 = altura (i)
+E4Min = altura (i)
 
-Tiempom4n=i/48.0
+T4n=i/48.0
 END IF
 END DO
 
-Minm3 = 0
+!************************************
+
+E5Min = 0
 DO i= 5381, 6725
-Dif2= Minm5 - altura(i)
+Dif2= E5Min - altura(i)
 IF (Dif2> 0) THEN 
-Minm5 = altura (i)
+E5Min = altura (i)
 
-Tiempom5n=i/48.0
+T5n=i/48.0
 END IF
 END DO
 
 
-!--------------------------------------------
+!************************************
 
-Maxd1 = 0
+d1Mx = 0
 DO i= 18, 65
-Dif3= Maxd1- altura(i)
+Dif3= d1Mx- altura(i)
 IF (Dif3< 0) THEN 
-Maxd1 = altura (i)
+d1Mx = altura (i)
 
-Tiempod1x= i * 0.5
+T1x= i * 0.5
 
 END IF
 END DO
 
-Maxd2 = 0
+!************************************
+
+d2Mx = 0
 DO i= 66, 113
-Dif2=  Maxd2 - altura(i)
+Dif2=  d2Mx - altura(i)
 IF (Dif3< 0) THEN 
-Maxd2 = altura(i)
+d2Mx = altura(i)
 
-Tiempod2x=(i* 0.5)
+T2x=(i* 0.5)
 
 END IF
 END DO
 
+!************************************
 
-Maxd3 = 0
+d3Mx = 0
 DO i= 114, 161
-Dif3= Maxd3 - altura(i)
+Dif3= d3Mx - altura(i)
 IF (Dif3< 0) THEN 
-Maxd3 = altura (i)
+d3Mx = altura (i)
 
-Tiempod3x=(i* 0.5)
+T3x=(i* 0.5)
 
 END IF
 END DO 
 
-Maxd4 = 0
+!************************************
+
+d4Mx = 0
 DO i= 162, 209
-Dif3= Maxd4 - altura(i)
+Dif3= d4Mx - altura(i)
 IF (Dif3< 0) THEN 
-Maxd4 = altura (i)
+d4Mx = altura (i)
 
-Tiempod4x=(i* 0.5)
+T4x=(i* 0.5)
 
 END IF
 END DO 
 
-Maxd5 = 0
+!************************************
+
+d5Mx = 0
 DO i= 210, 257
-Dif3= Maxd5 - altura(i)
+Dif3= d5Mx - altura(i)
 IF (Dif3< 0) THEN 
-Maxd5 = altura (i)
+d5Mx = altura (i)
 
-Tiempod5x=(i* 0.5)
+T5x=(i* 0.5)
 
-END IF
-END DO 
+End if
+End do 
 
-!--------------------------------------------
+!************************************---------------------
 
-Mind1 = 0
+F1Mi = 0
 DO i= 18, 65
-Dif4= Mind1 - altura(i)
+Dif4= F1Mi - altura(i)
 IF (Dif4> 0) THEN 
-Mind1 = altura (i)
+F1Mi = altura (i)
 
-Tiempod1n=i * 0.5
+E1nT=i * 0.5
 
 END IF
 END DO
 
-Mind2 = 0
+F2Mi = 0
 DO i= 66, 113
-Dif4= Mind2 - altura(i)
+Dif4= F2Mi - altura(i)
 IF (Dif2> 0) THEN 
-Mind2 = altura (i)
+F2Mi = altura (i)
 
-Tiempod2n=( i * 0.5) 
+E2nT=( i * 0.5) 
 END IF
 END DO
 
-Mind3 = 0
+F3Mi = 0
 DO i= 114, 161
-Dif4= Mind3 - altura(i)
+Dif4= F3Mi - altura(i)
 IF (Dif4> 0) THEN 
-Mind3 = altura (i)
+F3Mi = altura (i)
 
-Tiempod3n=(i* 0.5) 
+E3nT=(i* 0.5) 
 
 END IF
 END DO
 
-Mind4 = 0
+F4Mi = 0
 DO i= 162, 209
-Dif4= Mind4 - altura(i)
+Dif4= F4Mi - altura(i)
 IF (Dif4> 0) THEN 
-Mind4 = altura (i)
+F4Mi = altura (i)
 
-Tiempod4n=(i* 0.5) 
+E4nT=(i* 0.5) 
 
 END IF
 END DO
 
-Mind5 = 0
+F5Mi = 0
 DO i= 210, 257
-Dif4= Mind5 - altura(i)
+Dif4= F5Mi - altura(i)
 IF (Dif4> 0) THEN 
-Mind5 = altura (i)
+F5Mi = altura (i)
 
-Tiempod5n=(i* 0.5) 
+E5nT=(i* 0.5) 
 
 END IF
 END DO
 !--------------------------------------------
 
-PeriodomM1 = Tiempom1x 
-PeriodomM2 = Tiempom2x - Tiempom1x
-PeriodomM3 = Tiempom3x - Tiempom2x
-PeriodomM4 = Tiempom4x - Tiempom3x
-PeriodomM5 = Tiempom5x - Tiempom4x
+PM1 = T1x 
+PM2 = T2x - T1x
+PM3 = T3x - T2x
+PM4 = T4x - T3x
+PM5 = T5x - T4x
 
-PeriodomN1 = Tiempom1n 
-PeriodomN2 = Tiempom2n - Tiempom1n
-PeriodomN3 = Tiempom3n - Tiempom2n
-PeriodomN4 = Tiempom4n - Tiempom3n
-PeriodomN5 = Tiempom5n - Tiempom4n
+PN1 = T1n 
+PN2 = T2n - T1n
+PN3 = T3n - T2n
+PN4 = T4n - T3n
+PN5 = T5n - T4n
 
-PeriododM1 = Tiempod1x 
-PeriododM2 = Tiempod2x - Tiempod1x
-PeriododM3 = Tiempod3x - Tiempod2x
-PeriododM4 = Tiempod4x - Tiempod3x
-PeriododM5 = Tiempod5x - Tiempod4x
+PdM1 = T1x 
+PdM2 = T2x - T1x
+PdM3 = T3x - T2x
+PdM4 = T4x - T3x
+PdM5 = T5x - T4x
 
-PeriododN1 = Tiempod1n 
-PeriododN2 = Tiempod2n - Tiempod1n
-PeriododN3 = Tiempod3n - Tiempod2n
-PeriododN4 = Tiempod4n - Tiempod3n
-PeriododN5 = Tiempod5n - Tiempod4n
+PdN1 = E1nT 
+PdN2 = E2nT - E1nT
+PdN3 = E3nT - E2nT
+PdN4 = E4nT - E3nT
+PdN5 = E5nT - E4nT
 
 !---------------------------------------------
 
-Periodo_mensual_max = (PeriodomM1 + PeriodomM2 + PeriodomM3 + PeriodomM4 + PeriodomM5)/5.0
+Mensual_maximo = (PM1 + PM2 + PM3 + PM4 + PM5)/5.0
 
-Periodo_mensual_min = (PeriodomN1 + PeriodomN2 + PeriodomN3 + PeriodomN4 + PeriodomN5)/5.0
+Mensual_minimo = (PN1 + PN2 + PN3 + PN4 + PN5)/5.0
 
-Periodo_diario_max = (PeriododM1 +PeriododM2 +PeriododM3 + PeriododM4 + PeriododM5)/5.0
+Diario_max = (PdM1 +PdM2 +PdM3 + PdM4 + PdM5)/5.0
 
-Periodo_diario_min = (PeriododN1 +PeriododN2 +PeriododN3 + PeriododN4 + PeriododN5)/5.0
-
-
+Diario_min = (PdN1 +PdN2 +PdN3 + PdN4 + PdN5)/5.0
 
 
-Print *, 'Las mareas maximas mensuales fueron:'       
-Print *, 'Primer mes:', Maxm1,'En el dia:', Tiempom1x
-Print *, 'Segundo mes:',Maxm2,'En el dia:', Tiempom2x              
-Print *, 'Tercer mes:',Maxm3,'En el dia:', Tiempom3x
-Print *, 'Cuarto  mes:',Maxm4,'En el dia:', Tiempom4x             
-Print *, 'Quinto mes:',Maxm5,'En el dia:', Tiempom5x
 
-Print *, 'Las mareas minimas mensuales fueron:'
+
+Print *, 'Mensualmente las mareas maximas fueron de:'       
+Print *, 'Primer mes:', M1,'En el dia:', T1
+Print *, 'Segundo mes:',M2,'En el dia:', T2              
+Print *, 'Tercer mes:',M3,'En el dia:', T3
+Print *, 'Cuarto  mes:',M4,'En el dia:', T4             
+Print *, 'Quinto mes:',M5,'En el dia:', T5
+
+!-
+Print *, 'Mensualemte las mareas minimas fueron:'
        
-Print *, 'Primer mes:',Minm1, 'En el dia:', Tiempom1n
-Print *, 'Segundo mes:',Minm2,'En el dia:', Tiempom2n           
-Print *, 'Tercer mes:',Minm3,'En el dia:', Tiempom3n
-Print *, 'Cuarto  mes:',Minm4,'En el dia:', Tiempom4n              
-Print *, 'Quinto  mes:',Minm5,'En el dia:', Tiempom5n
+Print *, 'Primer mes:',E1Min, 'En el dia:', T1n
+Print *, 'Segundo mes:',E2Min,'En el dia:', T2n           
+Print *, 'Tercer mes:',E3Min,'En el dia:', T3n
+Print *, 'Cuarto  mes:',E4Min,'En el dia:', T4n              
+Print *, 'Quinto  mes:',E5Min,'En el dia:', T5n
 
-Print *, 'El periodo mensual de la  marea  maxima  es:', Periodo_mensual_max, 'dias'
+Print *, 'El periodo de marea maxima es:', Mensual_maximo, 'dias'
 
-Print *, 'El periodo mensual de la marea minima es:', Periodo_mensual_min, 'dias'
+Print *, 'El periodo de marea minima es:', Mensual_minimo, 'dias'
 
 Print *, 'Las mareas maximas diarias fueron:'       
-Print *, 'Primer dia:', Maxd1
-Print *, 'Segundo dia:',Maxd2           
-Print *, 'Tercer dia:',Maxd3
-Print *, 'Cuarto dia:',Maxd4           
-Print *, 'Quinto dia:',Maxd5
+Print *, 'Primer dia:', d1Mx
+Print *, 'Segundo dia:',d2Mx           
+Print *, 'Tercer dia:',d3Mx
+Print *, 'Cuarto dia:',d4Mx           
+Print *, 'Quinto dia:',d5Mx
 
 Print *, 'Las mareas minimas diarias fueron:'     
 
-Print *, 'Primer dia:',Mind1
-Print *, 'Segundo dia:',Mind2             
-Print *, 'Tercer dia:',Mind3
-Print *, 'Cuarto dia:',Mind4              
-Print *, 'Quinto dia:',Mind5
+Print *, 'Primer dia:',F1Mi
+Print *, 'Segundo dia:',F2Mi             
+Print *, 'Tercer dia:',F3Mi
+Print *, 'Cuarto dia:',F4Mi              
+Print *, 'Quinto dia:',F5Mi
 
 
-Print *, 'El periodo diario de la marea maxima es:', Periodo_diario_max, 'hrs'
+Print *, 'El periodo diario de la marea maxima es:', Diario_max, 'hrs'
 
-Print *, 'El periodo diario de la marea  minima es:', Periodo_diario_min, 'hrs' 
+Print *, 'El periodo diario de la marea  minima es:', Diario_min, 'hrs' 
 
 
 
 end program Mareas
+
 
 \end{verbatim}
 
@@ -397,8 +421,11 @@ La siguiente imagen muestra los datos que se utilizar\'an para describir la vari
 A continuaci\'on se muestra una imagen de los datos proporcionados por el programa en Fortran. 
 
 \begin{center}
-\includegraphics[scale=0.7]{Mareainf}\\
+\includegraphics[scale=0.5]{Mareainfo}\\
+
 \end{center}
+
+
 
 Al utilizar todos estos datos y el programa 'gnuplot' pasamos a graficar, con unos ejes adecuados queda de la siguiente manera:
 \begin{center}

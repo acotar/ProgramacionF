@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.15)  8 MAY 2015 11:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.15)  10 MAY 2015 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,6 +426,140 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+! Missing $ inserted.
+<inserted text> 
+                $
+l.17 Periodo_
+             mensual_max
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 18.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.18 Otros fenó
+                menos ocasionales, como los vientos, las lluvias, el desbord...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.18 Otros fenó
+                menos ocasionales, como los vientos, las lluvias, el desbord...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 18.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.18 ...s vientos, las lluvias, el desborde de rí
+                                                  os y los tsunamis provocan...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.18 ...s vientos, las lluvias, el desborde de rí
+                                                  os y los tsunamis provocan...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 18.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.18 ...s vientos, las lluvias, el desborde de rí
+                                                  os y los tsunamis provocan...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 18.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.18 ...can variaciones del nivel del mar, tambié
+                                                  n ocasionales, pero no pue...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.18 ...can variaciones del nivel del mar, tambié
+                                                  n ocasionales, pero no pue...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 18.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.18 ...r calificados de mareas, pero que no está
+                                                  n causados por la fuerza g...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.18 ...r calificados de mareas, pero que no está
+                                                  n causados por la fuerza g...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.19 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
+
+Overfull \hbox (780.70749pt too wide) in paragraph at lines 16--19
+\OT1/cmr/m/n/10 Periodo$[]\OML/cmm/m/it/10 ensual[]axOtrosfen[]menosocasionales
+; comolosvientos; laslluvias; eldesbordeder[]$ 
+ []
+
 
 ! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
 
@@ -484,7 +618,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<Tides.png, id=10, 396.48125pt x 601.24625pt>
+<Tides.png, id=12, 396.48125pt x 601.24625pt>
 File: Tides.png Graphic file (type png)
  <use Tides.png>
 Package pdftex.def Info: Tides.png used on input line 42.
@@ -499,134 +633,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--43
 
  []
 
-[2 <./Tides.png>]
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 REAL :: PeriodomM1, PeriodomM2, PeriodomM3, PeriodomM4, Peri
-odomM5[] 
+[2 <./Tides.png>] [3] [4] [5] [6] [7] [8] [9]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 414--414
+[]\OT1/cmtt/m/n/10 Print *, 'El periodo diario de la marea maxima es:', Diario_
+max, 'hrs'[] 
  []
 
 
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 REAL :: PeriodomN1, PeriodomN2, PeriodomN3, PeriodomN4, Peri
-odomn5[] 
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 414--414
+[]\OT1/cmtt/m/n/10 Print *, 'El periodo diario de la marea  minima es:', Diario
+_min, 'hrs'[] 
  []
 
 
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 REAL :: PeriododM1, PeriododM2, PeriododM3, PeriododM4, Peri
-ododM5[] 
- []
-
-
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 REAL :: PeriododN1, PeriododN2, PeriododN3, PeriododN4, Peri
-ododN5[] 
- []
-
-[3] [4] [5] [6] [7] [8]
-Overfull \hbox (127.49588pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Periodo_mensual_max = (PeriodomM1 + PeriodomM2 + PeriodomM3 
-+ PeriodomM4 + PeriodomM5)/5.0[] 
- []
-
-
-Overfull \hbox (127.49588pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Periodo_mensual_min = (PeriodomN1 + PeriodomN2 + PeriodomN3 
-+ PeriodomN4 + PeriodomN5)/5.0[] 
- []
-
-
-Overfull \hbox (111.74602pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Periodo_diario_max = (PeriododM1 +PeriododM2 +PeriododM3 + P
-eriododM4 + PeriododM5)/5.0[] 
- []
-
-
-Overfull \hbox (111.74602pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Periodo_diario_min = (PeriododN1 +PeriododN2 +PeriododN3 + P
-eriododN4 + PeriododN5)/5.0[] 
- []
-
-
-Overfull \hbox (95.99615pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Print *, 'El periodo mensual de la  marea  maxima  es:', Per
-iodo_mensual_max, 'dias'[] 
- []
-
-
-Overfull \hbox (80.24629pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Print *, 'El periodo mensual de la marea minima es:', Period
-o_mensual_min, 'dias'[] 
- []
-
-[9]
-Overfull \hbox (64.49643pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Print *, 'El periodo diario de la marea maxima es:', Periodo
-_diario_max, 'hrs'[] 
- []
-
-
-Overfull \hbox (69.74638pt too wide) in paragraph at lines 390--390
-[]\OT1/cmtt/m/n/10 Print *, 'El periodo diario de la marea  minima es:', Period
-o_diario_min, 'hrs'[] 
- []
-
-
-Overfull \hbox (1.19502pt too wide) in paragraph at lines 393--394
+Overfull \hbox (1.19502pt too wide) in paragraph at lines 417--418
 \OT1/cmr/m/n/10 La sigu-iente im-a-gen mues-tra los datos que se uti-lizar^^San
  para de-scribir la variaci^^Son
  []
 
-<Datos.png, id=39, 424.58624pt x 319.94531pt>
+[10] <Datos.png, id=44, 424.58624pt x 319.94531pt>
 File: Datos.png Graphic file (type png)
  <use Datos.png>
-Package pdftex.def Info: Datos.png used on input line 395.
+Package pdftex.def Info: Datos.png used on input line 419.
 (pdftex.def)             Requested size: 212.2926pt x 159.97226pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
-
-! LaTeX Error: File `Mareainf' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.400 \includegraphics[scale=0.7]{Mareainf}
-                                           \\
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[10 <./Datos.png (PNG copy)>]
-<GraficaMareas.png, id=43, 246.9225pt x 152.82094pt>
+<Mareainfo.png, id=45, 676.77844pt x 583.42969pt>
+File: Mareainfo.png Graphic file (type png)
+ <use Mareainfo.png>
+Package pdftex.def Info: Mareainfo.png used on input line 424.
+(pdftex.def)             Requested size: 338.3884pt x 291.71413pt.
+ [11 <./Datos.png (PNG copy)> <./Mareainfo.png (PNG copy)>]
+<GraficaMareas.png, id=49, 246.9225pt x 152.82094pt>
 File: GraficaMareas.png Graphic file (type png)
  <use GraficaMareas.png>
-Package pdftex.def Info: GraficaMareas.png used on input line 405.
+Package pdftex.def Info: GraficaMareas.png used on input line 432.
 (pdftex.def)             Requested size: 246.92188pt x 152.82054pt.
 
-[11 <./GraficaMareas.png (PNG copy)>] (./Reporte7.aux) ) 
+[12 <./GraficaMareas.png (PNG copy)>] (./Reporte7.aux) ) 
 Here is how much of TeX's memory you used:
- 2608 strings out of 494925
- 33249 string characters out of 6178544
+ 2610 strings out of 494925
+ 33377 string characters out of 6178544
  90879 words of memory out of 5000000
- 5777 multiletter control sequences out of 15000+600000
- 9357 words of font info for 36 fonts, out of 8000000 for 9000
+ 5789 multiletter control sequences out of 15000+600000
+ 11056 words of font info for 44 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  37i,7n,24p,989b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmtt10.pfb>
-Output written on Reporte7.pdf (11 pages, 195721 bytes).
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb>
+Output written on Reporte7.pdf (12 pages, 355586 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
