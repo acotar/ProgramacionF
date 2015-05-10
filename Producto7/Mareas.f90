@@ -1,31 +1,28 @@
 PROGRAM Mareas
 
 IMPLICIT NONE
+
+
+
 REAL, DIMENSION (7674):: altura
 INTEGER :: i
-!-------------------------------------
-REAL :: Dif, Maxm1, Maxm2, Maxm3, Maxm4, Maxm5
-REAL :: Tiempom1x, Tiempom2x, Tiempom3x, Tiempom4x, Tiempom5x
-!-------------------------------------
-REAL :: Dif2, Minm1, Minm2, Minm3, Minm4, Minm5
-REAL :: Tiempom1n, Tiempom2n, Tiempom3n, Tiempom4n, Tiempom5n
-!-------------------------------------
-REAL :: Dif3, Maxd1, Maxd2, Maxd3, Maxd4, Maxd5
-REAL :: Tiempod1x, Tiempod2x, Tiempod3x, Tiempod4x, Tiempod5x
-!-------------------------------------
-REAL :: Dif4, Mind1, Mind2, Mind3, Mind4, Mind5
-REAL :: Tiempod1n, Tiempod2n, Tiempod3n, Tiempod4n, Tiempod5n
-!-------------------------------------
-REAL :: PeriodomM1, PeriodomM2, PeriodomM3, PeriodomM4, PeriodomM5
-REAL :: PeriodomN1, PeriodomN2, PeriodomN3, PeriodomN4, Periodomn5
-REAL :: PeriododM1, PeriododM2, PeriododM3, PeriododM4, PeriododM5
-REAL :: PeriododN1, PeriododN2, PeriododN3, PeriododN4, PeriododN5
-!--------------------------------------
-REAL :: Periodo_mensual_max
-REAL :: Periodo_mensual_min
-REAL :: Periodo_diario_max
-REAL :: Periodo_diario_min
-!-------------------------------------
+real :: M1, M2, M3, M4, M5, Dif    ! Maximox
+real :: T1, T2, T3, T4, T5 ! Tiempox
+real :: Dif2, 1Min, 2Min, 3Min, 4Min, 5Min !Minm#
+real :: T1n, T2n, T3n, T4n, T5n !Tiempon
+real :: Dif3, d1Mx, d2Mx, d3Max, d4Max, d5Max !Maxd#
+real :: T1x, T2x, T3x, T4x, T5x !Tiempod#x
+real :: Dif4, 1Mi, 2Mi, 3Mi, 4Mi, 5Mi !Mind#
+real :: 1nT, 2nT, 3nT, 4nT, 5nT !Tiempod#n
+real :: PM1, PM2, PM3, PM4, PM5 !PeriodomM#
+REAL :: PN1, PN2, PN3, PN4, PN5 !PeriodomN#
+REAL :: PdM1, PdM2, PdM3, PdM4, PdM5 !PeriododM#
+REAL :: PdN1, PdN2, PdN3, PdN4, PdN5 !PeriododN#
+REAL :: Mensual_maximo !Periodo_mensual_max
+REAL :: Mensual_minimo !Periodo_mensual_min
+REAL :: Diario_max !Periodo_diario_max
+REAL :: Diario_min !Periodo_diario_min
+
 
 
 
@@ -36,60 +33,67 @@ DO i=1,7674
 READ (1,*) altura(i)
 END DO
 CLOSE (1)
-
-Maxm1 = 0
+!*************************************
+M1 = 0
 DO i=1,1344
-Dif=Maxm1 - altura(i)
+Dif=M1 - altura(i)
 IF (Dif < 0) THEN 
-Maxm1 = altura (i)
+M1 = altura (i)
 
 Tiempom1x= i/48.0
 
 END IF
 END DO
 
-Maxm2 = 0
+!************************************
+
+M2 = 0
 DO i=1345,2690
-Dif =  Maxm2 - altura(i)
+Dif =  M2 - altura(i)
 IF (Dif < 0) THEN 
-Maxm2 = altura(i)
+M2 = altura(i)
 
 Tiempom2x=i/48.0
 END IF
 END DO
 
+!************************************
 
-Maxm3 = 0
+M3 = 0
 DO i=2691,4035
-Dif = Maxm3 - altura(i)
+Dif = M3 - altura(i)
 IF (Dif < 0) THEN 
-Maxm3 = altura (i)
+M3 = altura (i)
 
 Tiempom3x=i/48.0
 END IF
 END DO 
 
-Maxm4 = 0
+!************************************
+
+M4 = 0
 DO i=4036,5380
-Dif = Maxm4 - altura(i)
+Dif = M4 - altura(i)
 IF (Dif < 0) THEN 
-Maxm4 = altura (i)
+M4 = altura (i)
 
 Tiempom4x=i/48.0
 END IF
 END DO
 
-Maxm5 = 0
+!************************************
+
+M5 = 0
 DO i=5381, 6725
-Dif = Maxm5 - altura(i)
+Dif = M5 - altura(i)
 IF (Dif < 0) THEN 
-Maxm5 = altura (i)
+M5 = altura (i)
 
 Tiempom5x=i/48.0
 END IF
 END DO
 
-!---------------------------------------------
+!************************************
 
 Minm1 = 0
 DO i= 1, 1344
@@ -101,6 +105,8 @@ Tiempom1n=i/48.0
 END IF
 END DO
 
+!************************************
+
 Minm2 = 0
 DO i= 1345, 2690
 Dif2= Minm2 - altura(i)
@@ -110,6 +116,8 @@ Minm2 = altura (i)
 Tiempom2n=i/48.0
 END IF
 END DO
+
+!************************************
 
 Minm3 = 0
 DO i= 2691, 4035
@@ -121,6 +129,8 @@ Tiempom3n=i/48.0
 END IF
 END DO
 
+!************************************
+
 Minm4 = 0
 DO i= 4036, 5380
 Dif2= Minm4 - altura(i)
@@ -130,6 +140,8 @@ Minm4 = altura (i)
 Tiempom4n=i/48.0
 END IF
 END DO
+
+!************************************
 
 Minm3 = 0
 DO i= 5381, 6725
@@ -142,7 +154,7 @@ END IF
 END DO
 
 
-!--------------------------------------------
+!************************************
 
 Maxd1 = 0
 DO i= 18, 65
@@ -155,6 +167,8 @@ Tiempod1x= i * 0.5
 END IF
 END DO
 
+!************************************
+
 Maxd2 = 0
 DO i= 66, 113
 Dif2=  Maxd2 - altura(i)
@@ -166,6 +180,7 @@ Tiempod2x=(i* 0.5)
 END IF
 END DO
 
+!************************************
 
 Maxd3 = 0
 DO i= 114, 161
@@ -178,6 +193,8 @@ Tiempod3x=(i* 0.5)
 END IF
 END DO 
 
+!************************************
+
 Maxd4 = 0
 DO i= 162, 209
 Dif3= Maxd4 - altura(i)
@@ -188,6 +205,8 @@ Tiempod4x=(i* 0.5)
 
 END IF
 END DO 
+
+!************************************
 
 Maxd5 = 0
 DO i= 210, 257
@@ -200,7 +219,7 @@ Tiempod5x=(i* 0.5)
 END IF
 END DO 
 
-!--------------------------------------------
+!************************************
 
 Mind1 = 0
 DO i= 18, 65
